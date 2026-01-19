@@ -1,0 +1,77 @@
+/* global themes */
+:root {
+  --font-h1: "Lato", sans-serif;
+  --font-h2: "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+/* Headings */
+h1 {
+  font-family: var(--font-h1);
+}
+
+h2 {
+  font-family: var(--font-h2);
+}
+
+/* Body text */
+p {
+  font-family: var(--font-body);
+}
+
+:root {
+  /* Brand Colors */
+  --light-blue: #add8e6;
+  --sky-blue: #31daed;
+  --light-pink: #ffc0cb;
+  --maroon: #800000;
+
+  /* Neutral Colors */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --background-light: #ffffff;
+
+  /* Fonts */
+  --font-primary: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* =========================
+   GLOBAL RESET
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons (default style) */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--maroon);
+  line-height: 1.2;
+}

@@ -1,0 +1,35 @@
+.services-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 2rem;
+}
+
+/* Hero */
+.services-hero {
+  text-align: center;
+  background: linear-gradient(135deg, #add8e6, #ffc0cb);
+  color: #800000;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+}
+
+/* Services List */
+.services-list {
+  margin: 3rem 0;
+}
+
+.services-list h2 {
+  color: #800000;
+  margin-bottom: 1rem;
+}
+
+.services-list ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* CTA */
+.services-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
