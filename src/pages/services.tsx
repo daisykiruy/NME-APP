@@ -1,30 +1,130 @@
-// src/pages/Services.tsx
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./Services.css";
 
 const Services: React.FC = () => {
   return (
     <div className="services-page">
+
+      {/* ===== HERO SERVICES SECTION ===== */}
       <section className="services-hero">
-        <h1>Services</h1>
-        <p>We offer the following services to enhance your learning experience.</p>
+        <div className="services-hero-content">
+
+          {/* Animated Book Stack */}
+          <div className="book-animation">
+            <img src="src/assets/book1.jpg" className="book book-1" alt="Book 1" />
+            <img src="src/assets/book2.jpg" className="book book-2" alt="Book 2" />
+            <img src="src/assets/book3.jpg" className="book book-3" alt="Book 3" />
+            <img src="src/assets/book4.jpg" className="book book-4" alt="Book 4" />
+            <img src="src/assets/book5.jpg" className="book book-5" alt="Book 5" />
+          </div>
+
+          {/* Hero Text */}
+          <div className="services-hero-text">
+            <h1>OUR SERVICES</h1>
+            <h2>Smart learning designed for modern nursing students</h2>
+            <p>
+              Nursing Made Easy provides structured, exam-focused learning tools
+              designed to simplify nursing education. From summarized notes to
+              interactive quizzes, our services are built to help students learn
+              faster, retain more, and perform confidently.
+            </p>
+          </div>
+
+        </div>
       </section>
 
-      <section className="services-list">
-        <h2>What We Offer</h2>
-        <ul>
-          <li>Free access to selected notes and quizzes</li>
-          <li>Premium subscription for full access</li>
-          <li>Progress tracking and analytics</li>
-          <li>Student support and guidance</li>
-        </ul>
+      {/* ===== WHAT WE OFFER ===== */}
+      <section className="services-offer">
+        <h1>WHAT WE OFFER</h1>
+        <h2>Focused solutions for effective nursing education</h2>
+
+        {/* Structured Learning */}
+        <div className="offer-row">
+          <div className="offer-image">
+            <img src="src/assets/img21.jpg" alt="Structured Learning" />
+          </div>
+          <div className="offer-text">
+            <h3>Structured Learning</h3>
+            <p>
+              Our learning content is carefully structured to follow nursing
+              curricula and examination standards. Topics are broken down into
+              logical sections, making it easier for students to understand
+              complex concepts without feeling overwhelmed.
+              <br /><br />
+              Each module builds on the previous one, ensuring steady academic
+              progress and stronger knowledge retention.
+            </p>
+          </div>
+        </div>
+
+        {/* Interactive Quizzes */}
+        <div className="offer-row reverse">
+          <div className="offer-text">
+            <h3>Interactive Quizzes</h3>
+            <p>
+              Our quizzes are designed to test understanding, not memorization.
+              They simulate real exam conditions and help students identify weak
+              areas early.
+              <br /><br />
+              Instant feedback allows learners to correct mistakes immediately,
+              boosting confidence and long-term retention.
+            </p>
+          </div>
+          <div className="offer-image">
+            <img src="src/assets/img20.jpg" alt="Interactive Quizzes" />
+          </div>
+        </div>
+
+        {/* Summarized Notes */}
+        <div className="offer-row">
+          <div className="offer-image">
+            <img src="src/assets/img22.jpg" alt="Summarized Notes" />
+          </div>
+          <div className="offer-text">
+            <h3>Summarized Notes</h3>
+            <p>
+              We provide concise, exam-oriented notes that highlight key points
+              without unnecessary detail. These summaries are ideal for quick
+              revision before exams or clinical assessments.
+              <br /><br />
+              The notes are designed to save time while maintaining academic
+              accuracy and professional nursing standards.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="services-cta">
-        <p>Subscribe today and unlock all features!</p>
-        <Link to="/pricing" className="cta-btn">Subscribe Now</Link>
+      {/* ===== FAQ SECTION ===== */}
+      <section className="services-faq">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <h2>Your questions, clearly answered</h2>
+
+        <div className="faq-list">
+          {[
+            "Is Nursing Made Easy suitable for all nursing levels?",
+            "Are the notes aligned with nursing curricula?",
+            "Can I access content on my phone?",
+            "Do quizzes track my progress?",
+            "Is there free content available?",
+            "How secure is the learning material?",
+            "Can I use the platform offline?",
+            "How often is content updated?",
+            "Do you offer exam preparation support?",
+            "Is customer support available?"
+          ].map((q, index) => (
+            <div key={index} className="faq-item">
+              <h3>{q}</h3>
+              <p>
+                Yes. Nursing Made Easy is designed to support students across
+                different nursing levels with structured, secure, and updated
+                learning materials.
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
+
     </div>
   );
 };

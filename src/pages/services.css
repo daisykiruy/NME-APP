@@ -1,35 +1,137 @@
-.services-page {
-  font-family: Arial, sans-serif;
-  color: #333;
-  padding: 2rem;
+ .services-page {
+  background: #fff;
+  color: #444;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Hero */
+/* ===== HERO ===== */
 .services-hero {
-  text-align: center;
-  background: linear-gradient(135deg, #add8e6, #ffc0cb);
+  padding: 6rem 4rem;
+  background: #f7fbff;
+}
+
+.services-hero-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* BOOK STACK ANIMATION */
+.book-animation {
+  position: relative;
+  width: 300px;
+  height: 380px;
+}
+
+.book {
+  position: absolute;
+  width: 260px;
+  left: 0;
+  opacity: 0;
+  animation: stackBooks 1s forwards;
+}
+
+.book-1 { animation-delay: 0s; }
+.book-2 { animation-delay: 1s; top: 20px; }
+.book-3 { animation-delay: 2s; top: 40px; }
+.book-4 { animation-delay: 3s; top: 60px; }
+.book-5 { animation-delay: 4s; top: 80px; }
+
+@keyframes stackBooks {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.services-hero-text h1 {
+  font-family: "Lato", sans-serif;
   color: #800000;
-  padding: 4rem 2rem;
-  border-radius: 12px;
+  font-size: 2.8rem;
 }
 
-/* Services List */
-.services-list {
-  margin: 3rem 0;
+.services-hero-text h2 {
+  color: #1e6fb9;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
-.services-list h2 {
+.services-hero-text p {
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* ===== WHAT WE OFFER ===== */
+.services-offer {
+  padding: 5rem 4rem;
+}
+
+.services-offer h1 {
+  font-family: "Lato", sans-serif;
+  color: #800000;
+  text-align: center;
+}
+
+.services-offer h2 {
+  color: #1e6fb9;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.offer-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.offer-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.offer-image img {
+  width: 420px;
+  border-radius: 16px;
+}
+
+.offer-text h3 {
   color: #800000;
   margin-bottom: 1rem;
 }
 
-.services-list ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
+/* ===== FAQ ===== */
+.services-faq {
+  background: #f7fbff;
+  padding: 5rem 4rem;
 }
 
-/* CTA */
-.services-cta {
+.services-faq h1 {
+  font-family: "Lato", sans-serif;
+  color: #800000;
   text-align: center;
-  margin-top: 3rem;
+}
+
+.services-faq h2 {
+  color: #1e6fb9;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
