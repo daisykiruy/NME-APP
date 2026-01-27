@@ -1,53 +1,28 @@
  .services-page {
-  background: #fff;
-  color: #444;
   font-family: "Montserrat", sans-serif;
 }
 
 /* ===== HERO ===== */
+
 .services-hero {
   padding: 6rem 4rem;
-  background: #f7fbff;
+  background: linear-gradient(
+    180deg,
+    var(--light-pink) 0%,
+    #ffffff 100%
+  );
 }
 
-.services-hero-content {
+ .services-hero-content {
   max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
-/* BOOK STACK ANIMATION */
-.book-animation {
-  position: relative;
-  width: 300px;
-  height: 380px;
-}
-
-.book {
-  position: absolute;
-  width: 260px;
-  left: 0;
-  opacity: 0;
-  animation: stackBooks 1s forwards;
-}
-
-.book-1 { animation-delay: 0s; }
-.book-2 { animation-delay: 1s; top: 20px; }
-.book-3 { animation-delay: 2s; top: 40px; }
-.book-4 { animation-delay: 3s; top: 60px; }
-.book-5 { animation-delay: 4s; top: 80px; }
-
-@keyframes stackBooks {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.services-hero-text {
+  flex: 2;              
 }
 
 .services-hero-text h1 {
@@ -57,7 +32,7 @@
 }
 
 .services-hero-text h2 {
-  color: #1e6fb9;
+  color: var(--sky-blue);
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
@@ -66,6 +41,21 @@
   max-width: 500px;
   line-height: 1.7;
 }
+
+.services-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.services-hero-img img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
 
 /* ===== WHAT WE OFFER ===== */
 .services-offer {

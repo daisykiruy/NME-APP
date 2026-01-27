@@ -1,59 +1,74 @@
-import React from "react";
-import { FaBookMedical, FaClipboardCheck, FaVideo, FaFileAlt } from "react-icons/fa";
+import React, { useEffect } from "react";
+import {
+  FaBookMedical,
+  FaClipboardCheck,
+  FaVideo,
+  FaFileAlt,
+} from "react-icons/fa";
 import "./Resource.css";
 
 const Resources: React.FC = () => {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".slide-left, .slide-right, .slide-up"
+    );
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+
+    elements.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  const bookStack = document.querySelector(".book-animation");
+  if (bookStack) observer.observe(bookStack);
+
+  return () => observer.disconnect();
+}, []);
+
+
   return (
     <section className="resources-section">
 
-      {/* ===== RESOURCES INTRO ===== */}
-      <div className="resources-header">
-        <h1>LEARNING RESOURCES</h1>
-        <h2>Everything you need to study smarter and succeed faster</h2>
-        <p>
-          Nursing Made Easy provides a wide range of carefully curated resources
-          designed to support nursing students throughout their academic journey.
-          All materials are structured, exam-focused, and easy to understand.
-        </p>
-      </div>
+      {/* ===== HERO RESOURCES (FLEX) ===== */}
+      <div className="resources-hero">
 
-      {/* ===== RESOURCE CATEGORIES ===== */}
-      <div className="resource-categories">
-
-        <div className="resource-card">
-          <FaBookMedical className="resource-icon" />
-          <h3>Nursing Notes</h3>
+        {/* left TEXT */}
+        <div className="resources-header slide-left">
+          <h1>LEARNING RESOURCES</h1>
+          <h2>Everything you need to study smarter and succeed faster</h2>
           <p>
-            Well-organized notes covering core nursing subjects, written in
-            simple language to help you grasp concepts quickly.
+            Nursing Made Easy provides a wide range of carefully curated
+            resources designed to support nursing students throughout
+            their academic journey. All materials are structured,
+            exam-focused, and easy to understand.
           </p>
         </div>
 
-        <div className="resource-card">
-          <FaClipboardCheck className="resource-icon" />
-          <h3>Practice Quizzes</h3>
-          <p>
-            Topic-based quizzes that simulate real exams and help identify
-            weak areas early.
-          </p>
-        </div>
-
-        <div className="resource-card">
-          <FaVideo className="resource-icon" />
-          <h3>Learning Guides</h3>
-          <p>
-            Step-by-step study guides that show you how to revise effectively
-            and prepare for exams with confidence.
-          </p>
-        </div>
-
-        <div className="resource-card">
-          <FaFileAlt className="resource-icon" />
-          <h3>Quick Summaries</h3>
-          <p>
-            Concise summaries for last-minute revision, highlighting only the
-            most important nursing points.
-          </p>
+        {/* right IMAGE */}
+        <div className="resources-hero-image slide-right">
+          <img src="src/assets/img13.png" alt="Nursing resources" />
         </div>
 
       </div>
@@ -62,49 +77,106 @@ const Resources: React.FC = () => {
       <div className="featured-resources">
         <h2>Featured Resources</h2>
 
-        <div className="featured-grid">
+        <div className="resource-categories">
 
-          <div className="featured-item">
-            <span className="tag">Popular</span>
-            <h3>Fundamentals of Nursing Notes</h3>
+          <div className="resource-card slide-up">
+            <FaBookMedical className="resource-icon" />
+            <h3>Nursing Notes</h3>
             <p>
-              A complete breakdown of nursing fundamentals, perfect for both
-              beginners and revision.
+              Well-organized nursing notes aligned with curriculum
+              requirements and examination standards.
             </p>
-            <button>View Resource</button>
           </div>
 
-          <div className="featured-item">
-            <span className="tag">New</span>
-            <h3>Medical-Surgical Quiz Pack</h3>
+          <div className="resource-card slide-up">
+            <FaClipboardCheck className="resource-icon" />
+            <h3>Practice Quizzes</h3>
             <p>
-              Test your understanding with professionally designed quiz
-              questions aligned with exams.
+              Exam-style quizzes that help identify weak areas and
+              reinforce learning through practice.
             </p>
-            <button>Start Quiz</button>
           </div>
 
-          <div className="featured-item">
-            <span className="tag premium">Premium</span>
-            <h3>Exam Revision Bundle</h3>
+          <div className="resource-card slide-up">
+            <FaVideo className="resource-icon" />
+            <h3>Learning Guides</h3>
             <p>
-              A premium collection of summarized notes and quizzes designed
-              for final exam preparation.
+              Step-by-step guides to help students revise efficiently
+              and prepare confidently for exams.
             </p>
-            <button>Unlock Access</button>
+          </div>
+
+          <div className="resource-card slide-up">
+            <FaFileAlt className="resource-icon" />
+            <h3>Quick Summaries</h3>
+            <p>
+              Concise summaries highlighting key nursing concepts for
+              last-minute revision.
+            </p>
           </div>
 
         </div>
       </div>
 
-      {/* ===== CTA ===== */}
-      <div className="resources-cta">
-        <h2>Ready to access quality nursing resources?</h2>
-        <p>
-          Join Nursing Made Easy today and take control of your learning
-          experience with structured, reliable, and secure study materials.
-        </p>
-        <button className="cta-btn">Explore Resources</button>
+      {/* ===== NEW BOOK INTRO ===== */}
+      <div className="book-intro">
+
+        <h2>
+          Obstetric Emergencies Made Easy
+          <span className="new-badge">What’s New</span>
+        </h2>
+
+        <div className="book-intro-content">
+
+          {/* LEFT TEXT */}
+          <div className="book-text slide-left">
+            <p>
+              <strong>Obstetric Emergencies Made Easy</strong> is a
+              comprehensive, exam-oriented guide designed to simplify
+              the management of critical obstetric conditions. The book
+              covers high-yield topics including postpartum hemorrhage,
+              pre-eclampsia and eclampsia, obstructed labor, shoulder
+              dystocia, sepsis, uterine rupture, and neonatal
+              resuscitation.
+              <br /><br />
+              Each topic is presented using clear explanations,
+              step-by-step emergency protocols, clinical tips, and
+              memory aids to help nursing students respond confidently
+              in real clinical situations.
+            </p>
+          </div>
+
+          {/* RIGHT BOOK ANIMATION */}
+          <div className="book-animation slide-right">
+            <img src="src/assets/book1.jpg" className="book book-1" alt="Book 1" />
+            <img src="src/assets/book2.jpg" className="book book-2" alt="Book 2" />
+            <img src="src/assets/book3.jpg" className="book book-3" alt="Book 3" />
+            <img src="src/assets/book4.jpg" className="book book-4" alt="Book 4" />
+            <img src="src/assets/book5.jpg" className="book book-5" alt="Book 5" />
+          </div>
+
+        </div>
+      </div>
+
+      {/* ===== CTA (CARD + IMAGE) ===== */}
+      <div className="resources-cta-wrapper">
+
+        {/* IMAGE */}
+        <div className="cta-image slide-right">
+          <img src="src/assets/img8.png" alt="Student holding card" />
+        </div>
+
+        {/* CARD */}
+        <div className="resources-cta slide-left">
+          <h2>Ready to access quality nursing resources?</h2>
+          <p>
+            Join Nursing Made Easy today and take control of your
+            learning experience with structured, reliable, and secure
+            study materials.
+          </p>
+          <button className="cta-btn">Explore Resources</button>
+        </div>
+
       </div>
 
     </section>

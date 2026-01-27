@@ -149,8 +149,8 @@
 }
 
 .home-page .cta-btn:hover {
-  background-color: #fff;
-  color: #800000;
+  background-color: #800000;
+  color: #fff;
 }
 
   /* ABOUT SECTION */
@@ -222,7 +222,7 @@
 .about-cards {
   margin-top: 4rem;
   display: flex;
-  gap: 2rem;
+  gap:1rem;
 }
 /* 
 .about-card {
@@ -254,6 +254,7 @@
   font-family: 'Lato', sans-serif;
   color: #800000;
   text-transform: lowercase;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -303,7 +304,7 @@
   padding: 2rem 1.5rem;
   border-radius: 12px;
   width: 100%;
-  max-width: 280px;
+  max-width: 400px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
   /* scroll animation start */

@@ -1,24 +1,42 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import "./Services.css";
+import { useEffect } from "react";
+
 
 const Services: React.FC = () => {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".slide-image, .slide-title, .slide-text"
+    );
+  
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+  
+    elements.forEach(el => observer.observe(el));
+  
+    return () => observer.disconnect();
+  }, []);
+  
+  
+ 
+
   return (
     <div className="services-page">
+
 
       {/* ===== HERO SERVICES SECTION ===== */}
       <section className="services-hero">
         <div className="services-hero-content">
-
-          {/* Animated Book Stack */}
-          <div className="book-animation">
-            <img src="src/assets/book1.jpg" className="book book-1" alt="Book 1" />
-            <img src="src/assets/book2.jpg" className="book book-2" alt="Book 2" />
-            <img src="src/assets/book3.jpg" className="book book-3" alt="Book 3" />
-            <img src="src/assets/book4.jpg" className="book book-4" alt="Book 4" />
-            <img src="src/assets/book5.jpg" className="book book-5" alt="Book 5" />
-          </div>
-
           {/* Hero Text */}
           <div className="services-hero-text">
             <h1>OUR SERVICES</h1>
@@ -31,6 +49,12 @@ const Services: React.FC = () => {
             </p>
           </div>
 
+          {/* hero img */}
+
+          <div className="services-hero-img">
+            <img src="src/assets/img20.jpg" alt="service-hero-img" />
+          </div>
+
         </div>
       </section>
 
@@ -40,7 +64,7 @@ const Services: React.FC = () => {
         <h2>Focused solutions for effective nursing education</h2>
 
         {/* Structured Learning */}
-        <div className="offer-row">
+        <div className="offer-row" id="structured-learning">
           <div className="offer-image">
             <img src="src/assets/img21.jpg" alt="Structured Learning" />
           </div>
@@ -59,7 +83,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Interactive Quizzes */}
-        <div className="offer-row reverse">
+        <div className="offer-row reverse"id="interactive-quizzes">
           <div className="offer-text">
             <h3>Interactive Quizzes</h3>
             <p>
@@ -77,7 +101,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Summarized Notes */}
-        <div className="offer-row">
+        <div className="offer-row"id="summary-notes">
           <div className="offer-image">
             <img src="src/assets/img22.jpg" alt="Summarized Notes" />
           </div>
