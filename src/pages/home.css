@@ -413,22 +413,5 @@
 }
 
 
-/* CTA Section */
-.cta-section {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #800000;
-  color: #fff;
-}
 
-.cta-section h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #fff;
-}
 
-/* .cta-section .cta-btn{
-  margin-bottom: 10px;
-  background-color: #ffc0cb;
-  color: #800000;
-} */

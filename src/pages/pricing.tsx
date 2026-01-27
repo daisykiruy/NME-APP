@@ -1,32 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheckCircle, FaLock, FaStar } from "react-icons/fa";
 import "./Pricing.css";
 
 const Pricing: React.FC = () => {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".slide-up, .slide-down");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="pricing-section">
 
-      {/* ===== HEADER ===== */}
-      <div className="pricing-header">
-        <h1>PRICING PLANS</h1>
-        <h2>Choose a plan that fits your learning journey</h2>
-        <p>
-          Whether you are just getting started or preparing for final exams,
-          Nursing Made Easy offers flexible pricing options designed to give
-          you maximum value.
-        </p>
+      {/* ===== HERO ===== */}
+      <div className="pricing-hero">
+        <div className="pricing-hero-content slide-down">
+
+          <div className="pricing-hero-image">
+            <img src="src/assets/img6.png" alt="Pricing illustration" />
+          </div>
+
+          <div className="pricing-header">
+            <h1>PRICING PLANS</h1>
+            <h2>Choose a plan that fits your learning journey</h2>
+            <p>
+              Whether you are just getting started or preparing for final exams,
+              Nursing Made Easy offers flexible pricing options designed to give
+              you maximum value.
+            </p>
+          </div>
+
+        </div>
       </div>
 
       {/* ===== PRICING CARDS ===== */}
       <div className="pricing-cards">
 
-        {/* FREE PLAN */}
-        <div className="pricing-card">
+        <div className="pricing-card slide-up">
           <h3>Free Access</h3>
           <p className="price">KES 0</p>
-          <p className="plan-desc">
-            Perfect for students exploring the platform.
-          </p>
+          <p className="plan-desc">Perfect for students exploring the platform.</p>
 
           <ul>
             <li><FaCheckCircle /> Limited nursing notes</li>
@@ -38,16 +65,11 @@ const Pricing: React.FC = () => {
           <button className="outline-btn">Get Started</button>
         </div>
 
-        {/* STANDARD PLAN */}
-        <div className="pricing-card highlighted">
-          <span className="badge">
-            <FaStar /> Most Popular
-          </span>
+        <div className="pricing-card highlighted slide-up">
+          <span className="badge"><FaStar /> Most Popular</span>
           <h3>Standard Plan</h3>
           <p className="price">KES 999<span>/month</span></p>
-          <p className="plan-desc">
-            Ideal for consistent learners and exam preparation.
-          </p>
+          <p className="plan-desc">Ideal for consistent learners and exam preparation.</p>
 
           <ul>
             <li><FaCheckCircle /> Full nursing notes</li>
@@ -59,13 +81,10 @@ const Pricing: React.FC = () => {
           <button className="primary-btn">Subscribe Now</button>
         </div>
 
-        {/* PREMIUM PLAN */}
-        <div className="pricing-card">
+        <div className="pricing-card slide-up">
           <h3>Premium Plan</h3>
           <p className="price">KES 2,499<span>/semester</span></p>
-          <p className="plan-desc">
-            Best for serious students targeting top results.
-          </p>
+          <p className="plan-desc">Best for serious students targeting top results.</p>
 
           <ul>
             <li><FaCheckCircle /> Everything in Standard</li>
@@ -79,22 +98,14 @@ const Pricing: React.FC = () => {
 
       </div>
 
-      {/* ===== INCLUDED SECTION ===== */}
-      <div className="pricing-includes">
+      {/* ===== CTA (INCLUDES MOVED INSIDE) ===== */}
+      <div className="pricing-cta slide-up">
         <h2>What’s Included</h2>
         <p>
           Every paid plan gives you structured, secure, and professionally
           prepared learning materials designed for nursing success.
         </p>
-      </div>
 
-      {/* ===== CTA ===== */}
-      <div className="pricing-cta">
-        <h2>Start learning the smart way</h2>
-        <p>
-          Join thousands of nursing students who trust Nursing Made Easy
-          for reliable and exam-focused study resources.
-        </p>
         <button className="primary-btn">View Plans</button>
       </div>
 

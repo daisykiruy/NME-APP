@@ -1,10 +1,34 @@
 /* Footer.css */
+
 .footer {
   background-color: #800000; /* maroon */
   color: white;
-  padding: 2rem 2rem;
+  padding: 3rem 2rem 2rem;
 }
 
+/* FOOTER CTA  */
+.cta-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #800000;
+  color: #fff;
+}
+
+.cta-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #fff;
+}
+.cta-section .cta-btn{
+  background-color: #ffc0cb;
+  color: #800000;
+}
+.cta-section .cta-btn:hover{
+  background-color: #fff;
+  color: #800000;
+}
+
+/* ===== FOOTER LINKS ===== */
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -37,6 +61,34 @@
   color: #ffc0cb; /* light pink */
 }
 
+/* ===== SOCIAL ICONS ===== */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #ffc0cb;
+  color: #800000;
+  transform: translateY(-4px);
+}
+
+/* ===== COPYRIGHT ===== */
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;

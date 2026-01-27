@@ -283,13 +283,7 @@ const Home: React.FC = () => {
   </div>
 </section>
 
-      {/* Call to Action */}
-      <section className="cta-section">
-        <h2>Ready to start learning?</h2>
-        <Link to="/pricing" className="cta-btn">
-          Subscribe Now
-        </Link>
-      </section>
+    
     </div>
   );
 };
