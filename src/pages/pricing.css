@@ -14,7 +14,7 @@
     var(--light-blue) 0%,
     #ffff 50%
   );
-  /* background: url("../assets/img28.jpg") center / cover no-repeat; */
+  /* background: url("/img28.jpg") center / cover no-repeat; */
 }
 /* 
 .pricing-hero::before {

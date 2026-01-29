@@ -31,7 +31,7 @@ const Pricing: React.FC = () => {
         <div className="pricing-hero-content slide-down">
 
           <div className="pricing-hero-image">
-            <img src="src/assets/img6.png" alt="Pricing illustration" />
+            <img src="/img6.png" alt="Pricing illustration" />
           </div>
 
           <div className="pricing-header">

@@ -15,7 +15,7 @@
   padding: 2rem 4rem;
   min-height: 100vh;
   width: 100%;
-  background: url("../assets/img28.jpg") center center / cover no-repeat;
+  background: url("/img28.jpg") center center / cover no-repeat;
 
 }
 
@@ -207,7 +207,7 @@
   padding: 4rem 2rem;
   position: relative;
   text-align: center;
-  background: url("../assets/img26.jpg") center center / cover no-repeat
+  background: url("/img26.jpg") center center / cover no-repeat
   
 }
 .founders::before {

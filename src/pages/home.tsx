@@ -106,7 +106,7 @@ const Home: React.FC = () => {
 
         </div>
         <div className="hero-image">
-          <img src="src/assets/hero-img3.png" alt="Nursing Illustration" />
+          <img src="/hero-img3.png" alt="Nursing Illustration" />
         </div>
       </section>
 
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
     </div>
 
     <div className="about-image ">
-      <img src="src/assets/img16.jpg" alt="Nursing students learning" />
+      <img src="/img16.jpg" alt="Nursing students learning" />
     </div>
   </div>
 

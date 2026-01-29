@@ -63,7 +63,7 @@
 /* ===== WHAT WE OFFER ===== */
 .services-offer {
   padding: 5rem 4rem;
-  background: url("../assets/img24.jpg") center center / cover no-repeat;
+  background: url("/img24.jpg") center center / cover no-repeat;
   position: relative;
 }
 /* 50% opacity overlay */

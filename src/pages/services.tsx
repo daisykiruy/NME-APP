@@ -54,7 +54,7 @@ const Services: React.FC = () => {
 
     {/* Hero Image */}
     <div className="services-hero-img slide-image">
-      <img src="src/assets/img31.png" alt="service-hero-img" />
+      <img src="/img31.png" alt="service-hero-img" />
     </div>
 
   </div>
@@ -70,7 +70,7 @@ const Services: React.FC = () => {
   <div className="offer-card slide-up">
     <div className="offer-row">
       <div className="offer-image">
-        <img src="src/assets/img33.png" alt="Structured Learning" />
+        <img src="/img33.png" alt="Structured Learning" />
       </div>
       <div className="offer-text">
         <h3>Structured Learning</h3>
@@ -102,7 +102,7 @@ const Services: React.FC = () => {
         </p>
       </div>
       <div className="offer-image">
-        <img src="src/assets/img20.jpg" alt="Interactive Quizzes" />
+        <img src="/img20.jpg" alt="Interactive Quizzes" />
       </div>
     </div>
   </div>
@@ -111,7 +111,7 @@ const Services: React.FC = () => {
   <div className="offer-card slide-up">
     <div className="offer-row">
       <div className="offer-image">
-        <img src="src/assets/img22.jpg" alt="Summarized Notes" />
+        <img src="/img22.jpg" alt="Summarized Notes" />
       </div>
       <div className="offer-text">
         <h3>Summarized Notes</h3>

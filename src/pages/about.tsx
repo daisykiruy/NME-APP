@@ -88,7 +88,7 @@ useEffect(() => {
               <Link to="/pricing" className="cta-btn">Get Started</Link>
           </div>
           <div className="hero-image">
-            <img src="src/assets/img9.png" alt="Nursing Illustration" />
+            <img src="/img9.png" alt="Nursing Illustration" />
           </div>
        
       </section>
@@ -163,7 +163,7 @@ useEffect(() => {
 
       <div className="founder-header">
         <div className="founder-image slide-image">
-          <img src="src/assets/nicole6.jpg" alt="Nicole Jepchumba Magut" />
+          <img src="/nicole6.jpg" alt="Nicole Jepchumba Magut" />
         </div>
 
         <div className="founder-title slide-title">
@@ -187,7 +187,7 @@ useEffect(() => {
 
       <div className="founder-header">
         <div className="founder-image slide-image">
-          <img src="src/assets/limo.jpeg" alt="Limo Bill" />
+          <img src="/limo.jpeg" alt="Limo Bill" />
         </div>
 
         <div className="founder-title slide-title">

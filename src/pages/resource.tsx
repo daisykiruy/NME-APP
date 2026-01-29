@@ -68,7 +68,7 @@ useEffect(() => {
 
         {/* right IMAGE */}
         <div className="resources-hero-image slide-right">
-          <img src="src/assets/img13.png" alt="Nursing resources" />
+          <img src="/img13.png" alt="Nursing resources" />
         </div>
 
       </div>
@@ -148,11 +148,11 @@ useEffect(() => {
 
           {/* RIGHT BOOK ANIMATION */}
           <div className="book-animation slide-right">
-            <img src="src/assets/book1.jpg" className="book book-1" alt="Book 1" />
-            <img src="src/assets/book2.jpg" className="book book-2" alt="Book 2" />
-            <img src="src/assets/book3.jpg" className="book book-3" alt="Book 3" />
-            <img src="src/assets/book4.jpg" className="book book-4" alt="Book 4" />
-            <img src="src/assets/book5.jpg" className="book book-5" alt="Book 5" />
+            <img src="/book1.jpg" className="book book-1" alt="Book 1" />
+            <img src="/book2.jpg" className="book book-2" alt="Book 2" />
+            <img src="/book3.jpg" className="book book-3" alt="Book 3" />
+            <img src="/book4.jpg" className="book book-4" alt="Book 4" />
+            <img src="/book5.jpg" className="book book-5" alt="Book 5" />
           </div>
 
         </div>
@@ -163,7 +163,7 @@ useEffect(() => {
 
         {/* IMAGE */}
         <div className="cta-image slide-right">
-          <img src="src/assets/img8.png" alt="Student holding card" />
+          <img src="/img8.png" alt="Student holding card" />
         </div>
 
         {/* CARD */}
