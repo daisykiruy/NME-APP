@@ -1,7 +1,7 @@
 // src/components/Navbar.tsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; // Import the CSS file
+import "./navbar.css"; // Import the CSS file
 
 type NavLink = {
   name: string;
