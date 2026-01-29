@@ -1,7 +1,7 @@
 // src/pages/Home.tsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Home.css"; 
+import "./home.css"; 
 import { useEffect, useState } from "react";
 // Icons for Features section
 import {

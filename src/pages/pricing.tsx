@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FaCheckCircle, FaLock, FaStar } from "react-icons/fa";
-import "./Pricing.css";
+import "./pricing.css";
 
 const Pricing: React.FC = () => {
 

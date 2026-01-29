@@ -1,6 +1,6 @@
 // src/pages/About.tsx
 import React from "react";
-import "./About.css";
+import "./about.css";
 import { FaShieldAlt, FaLightbulb, FaAward, FaCheckCircle } from "react-icons/fa";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";

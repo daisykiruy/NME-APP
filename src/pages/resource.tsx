@@ -5,7 +5,7 @@ import {
   FaVideo,
   FaFileAlt,
 } from "react-icons/fa";
-import "./Resource.css";
+import "./resource.css";
 
 const Resources: React.FC = () => {
 

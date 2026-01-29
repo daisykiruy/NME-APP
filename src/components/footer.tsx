@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
-import "./Footer.css";
+import "./footer.css";
 
 type FooterLink = {
   name: string;
